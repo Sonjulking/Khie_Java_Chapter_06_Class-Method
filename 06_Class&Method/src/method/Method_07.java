@@ -2,7 +2,7 @@ package method;
 
 //메서드 호출 시 반환형 
 
-public class method_07 {
+public class Method_07 {
 
 	// 값이 반환이 된 경우
 	public static int method1() { // 실인수를 받을 가인수(매개변수)가 없음!
