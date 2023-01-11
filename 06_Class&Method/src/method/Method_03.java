@@ -17,7 +17,7 @@ import java.util.Scanner;
 
 public class Method_03 {
 
-	public static void total(int k, int e, int m) { // 실인수를 받아줄 매개변수, 자료형이 같아도 생략 불가능
+	public static void total(int k, int e, int m) { // 실인수를 받아줄 가인수(매개변수), 자료형이 같아도 생략 불가능
 		// 호출이 끝나면 메모리에서 사라짐. (호출할때만 쓰이는 변수들)
 
 		System.out.println("sum >>> " + (k + e + m));
