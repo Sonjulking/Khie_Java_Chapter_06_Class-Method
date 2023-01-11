@@ -21,10 +21,10 @@ public class Example1_A {
 			System.out.print("학생 학번 입력 : ");
 			h[i] = sc.nextInt();
 
-			System.out.println("학생 학과 입력 : ");
+			System.out.print("학생 학과 입력 : ");
 			m[i] = sc.next();
 
-			System.out.println("학생 연락처 입력 : ");
+			System.out.print("학생 연락처 입력 : ");
 			p[i] = sc.next();
 
 		} // input() 메서드 end
@@ -50,7 +50,7 @@ public class Example1_A {
 	// 학생 정보를 조회하는 메서드
 	public static void search(String[] n, int[] h, String[] m, String[] p, Scanner sc) {
 
-		System.out.println("조회할 학생의 학번 입력");
+		System.out.print("조회할 학생의 학번 입력");
 		int hakbun = sc.nextInt();
 
 		for (int i = 0; i < m.length; i++) {
@@ -70,16 +70,16 @@ public class Example1_A {
 	// 학생의 정보를 수정하는 메서드
 	public static void modify(int[] h, String[] m, String[] p, Scanner sc) {
 
-		System.out.println("수정할 학생의 학번 입력 : ");
+		System.out.print("수정할 학생의 학번 입력 : ");
 
 		int hakbun = sc.nextInt();
 
 		for (int i = 0; i < m.length; i++) {
 			if (hakbun == h[i]) {
-				System.out.println("수정할 학생 학과 입력 : ");
+				System.out.print("수정할 학생 학과 입력 : ");
 				m[i] = sc.next();
 
-				System.out.println("수정할 학생 연락처 입력 : ");
+				System.out.print("수정할 학생 연락처 입력 : ");
 				p[i] = sc.next();
 			}
 
@@ -87,11 +87,11 @@ public class Example1_A {
 
 	}// modify() 메서드 end
 
-	public static void end(Scanner sc) {
+	public static String end(Scanner sc) {
 
-		System.out.println("프로그램을 종료 하시겠습니까?(Y : 종료 / N : 계속) : ");
+		System.out.print("프로그램을 종료 하시겠습니까?(Y : 종료 / N : 계속) : ");
 
-		String res = sc.next();
+		return sc.next();
 
 	}
 
@@ -119,14 +119,16 @@ public class Example1_A {
 
 			System.out.println("*** 학생관리 프로그램 ***");
 			System.out.println("1. 학생 등록");
-			System.out.println("2. 전체출력");
+			System.out.println("2. 전체 출력");
 			System.out.println("3. 학생 조회");
-			System.out.println("4. 정보수정");
+			System.out.println("4. 정보 수정");
 			System.out.println("5. 프로그램 종료");
 
 			System.out.println();
 
 			System.out.print("학생관리 메뉴 중 하나를 선택하세요. : ");
+
+			String result = "";
 
 //			int menu = sc.nextInt();
 
@@ -152,11 +154,19 @@ public class Example1_A {
 
 			case 5: // 프로그램 종료 메뉴
 				// 프로그램 종료하는 메서드 호출
-				end(sc);
+				result = end(sc);
 
+			} // switch ~ case end
+
+			if (result.equalsIgnoreCase("Y")) {
+				break;
 			}
 
-		}
+		} // while문 end
+
+		System.out.println("프로그램이 종료 되었습니다. 수고 하셨습니다.");
+
+		sc.close();
 
 	}
 
