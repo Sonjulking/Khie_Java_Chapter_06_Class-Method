@@ -1,4 +1,5 @@
 package classes;
+
 /*
  * 객체(Object)?
  * - 실 세계에서 우리 주변에 있는 모든 것이 객체임.
@@ -65,6 +66,10 @@ package classes;
  */
 
 public class Class_01 {
+	/*
+	 * 멤버변수는 초기값을 설정하지 않으면 JVM이 객체 생성 시점에 해당 데이터 타입(자료형)에 맞게 알아서 해당 자료형의 default값을
+	 * 설정을 해줌.
+	 */
 
 	// 전역 변수
 
@@ -88,11 +93,40 @@ public class Class_01 {
 		// 클래스를 대상으로 객체를 만드는 과정
 		// 1단계 : 클래스 선언
 		// 형식) 클래스이름 참조변수; Scanner(클래스 이름) sc(참조변수)
-		Class_01 ex;
+
+		// Class_01 ex;
 
 		// 2단계 : 클래스를 메모리(heap)에 생성
 		// 형식) 참조변수 = new 클래스이름(); 이렇게 하면 힙 메모리에 만들어짐.
-		ex = new Class_01();
+		// ex = new Class_01();
+
+		// Scanner sc = new Scanner(System.in);
+
+		Class_01 ex = new Class_01();
+
+		System.out.println("ex >>> " + ex);
+
+		// 3단계 : 참조변수를 이용하여 객체에 접근.
+		// 객체에 접근 시 .(도트)을 이용하여 접근해줌.
+
+		ex.display();
+		System.out.println();
+
+		ex.num = 100;
+		ex.str = "홍길동";
+
+		ex.display();
+		System.out.println();
+
+		Class_01 ex2 = new Class_01();
+
+		System.out.println("ex2 >>> " + ex2);
+		ex2.num = 255;
+		ex2.str = "유관순";
+
+		ex2.display(); // 설계도는 동일하지만 전혀 다른 객체가 나와버린다!
+		// 참조변수의 이름은 달라야된다!
+		// new 키워드 사용하면 새로 만드는거임
 	}
 
 }
