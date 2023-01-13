@@ -107,7 +107,7 @@ public class Class_01 {
 		System.out.println("ex >>> " + ex);
 
 		// 3단계 : 참조변수를 이용하여 객체에 접근.
-		// 객체에 접근 시 .(도트)을 이용하여 접근해줌.
+		// 객체에 접근 시 .(도트 dot 닷)을 이용하여 접근해줌.
 
 		ex.display();
 		System.out.println();

@@ -1,6 +1,6 @@
 package classpart;
 
-public class studentTest {
+public class StudentTest {
 
 	public static void main(String[] args) {
 		Student studentAhn = new Student();
