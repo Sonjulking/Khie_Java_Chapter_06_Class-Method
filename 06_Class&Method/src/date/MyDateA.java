@@ -1,5 +1,7 @@
 package date;
 
+import java.util.Calendar;
+
 public class MyDateA {
 
 	private int day;
@@ -71,5 +73,37 @@ public class MyDateA {
 
 	public int getMonth() {
 		return month;
+	}
+
+	public void setMonth(int month) {
+		if (month < 1 || month > 12) {
+			isValid = false;
+		} else {
+			this.month = month;
+		}
+
+	}
+
+	public int getYear() {
+
+		return year;
+
+	}
+
+	public void setYear(int year) {
+		if (year > Calendar.getInstance().get(Calendar.YEAR)) {
+			isValid = false;
+		} else {
+			this.year = year;
+		}
+	}
+
+	public String isValid() {
+		if (isValid) {
+			return "유효한 날짜입니다.";
+		} else {
+			return "유효하지 않은 날짜 입니다.";
+		}
+
 	}
 }
