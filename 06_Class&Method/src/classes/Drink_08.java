@@ -10,7 +10,7 @@ public class Drink_08 {
 
 		System.out.print("자판기 음료 갯수를 입력하세요. : "); // 배열의 크기
 
-		// 객체 배열을 만들어보자.
+		// 객체 배열을 만들어보자. //객체배열 시험에 나올수도 ★★★★★★★
 
 		Drink[] drinks = new Drink[sc.nextInt()];
 
