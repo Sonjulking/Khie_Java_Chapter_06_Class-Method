@@ -75,6 +75,7 @@ public class Drink_08 {
 		 */
 
 		for (int i = 0; i < drinks.length; i++) {
+
 			if (coin >= drinks[i].price) {// (참조변수.객체) 처럼 접근하는거랑 같음.
 
 				System.out.print(drinks[i].name + "\t");
